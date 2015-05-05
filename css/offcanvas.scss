@@ -1,0 +1,137 @@
+$black: #222;
+$white: #fff;
+$lightblack: #080808;
+
+html, body{
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body{
+    &.active{
+        overflow-y: hidden;
+    }
+}
+
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 25px;
+    z-index: 100;
+    &.active{
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: background-color 0.35s;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+}
+
+.navbar{
+    border: none;
+     .navbar-nav>.current-menu-item {
+        a{
+            color: $white;
+            background-color: $lightblack;
+        }
+    }
+}
+
+.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar{
+    .container{
+        padding: 0px;
+        .navbar-header{
+            margin: 0 -15px;
+            padding: 0 15px;
+        }
+    }
+}
+
+.transition{
+     transition: width 0.35s !important; 
+}
+
+.container{
+    &>.navbar-collapse{
+        position: fixed;
+        z-index: 1000;
+        bottom: 0px;
+        top: 0px;
+        margin-left: -15px;
+        width: 0px;
+        white-space: nowrap;
+        box-shadow: none;
+        border-top: 0px solid white;
+        padding: 0px;
+        display: block;
+        overflow-y: auto;   
+        background-color: $black;
+        overflow-x: hidden;
+    }
+    ul{
+        padding: 0px;
+    }
+}
+
+.navbar-toggle{
+    border: none;
+    margin-left: 10px;
+}
+
+.container{
+    &>.navbar-collapse.in{
+      width: 90%;
+      background-color: $black;
+    }
+    ul{
+        width: 100%;
+        padding-left: 15px;
+    }
+}
+
+.navbar-nav {
+    margin: 0px;
+}
+
+@media(min-width: 768px){
+    .navbar{
+        .container{
+            padding:0 15px;
+            .navbar-header{
+                margin: 0px;
+                padding: 0px;
+            }
+            ul{
+                width: auto;
+                background-color: transparent;
+                padding-left: none;
+            }
+        }
+    }    
+    .container>.navbar-collapse{
+        position: initial;
+        z-index: initial;
+        bottom: initial;
+        top: initial;;
+        background-color: initial;
+        margin: initial;
+        width: initial;
+    }   
+    
+    .navbar-nav {
+      margin: initial;
+    }
+    .overlay{
+        display: none;
+    }
+    
+}
