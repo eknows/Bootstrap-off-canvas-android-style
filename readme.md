@@ -2,21 +2,24 @@
 
 ## Description
 Bootstrap navigation hack for Android style off canvas menu.
-1. only works with "navbar-static-top"
+
+1. Only works with navbar-static-top
 2. jquery is required
-3. jquery mobile is required for touch events, build it here:
-http://jquerymobile.com/download-builder/
+3. jquery mobile is required for touch events, build it here: http://jquerymobile.com/download-builder/
 4. bootstrap ist required
 5. Hack your Bootstrap navigation:
 
-Add "<div class="overlay"></div>" directly after the body tag
+Add directly after the body tag
+```<div class="overlay"></div>``` 
 
-Change navbar button data-toggle
-data-toggle="collapse"  --->  data-toggle="offcanvas"
+Change data-toggle to offcanvas
+```<button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" aria-controls="navbar">```
 
-Add class "navbar-static-top" to <nav class="navbar navbar-default">
+Add class navbar-static-top
+```<nav class="navbar navbar-inverse navbar-static-top">```
 
-Add class "pull-left" to navbar Button
+Add class pull-left to navbar Button
+```<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas" aria-controls="navbar">```
 
-6. Demo Time
+## Demo Time
 http://jsfiddle.net/do05ptj2/
