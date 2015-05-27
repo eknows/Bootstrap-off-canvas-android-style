@@ -3,11 +3,11 @@ $white: #fff;
 $lightblack: #080808;
 
 html, body{
-    overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
 body{
     &.active{
+        overflow-x: hidden;
         overflow-y: hidden;
     }
 }
