@@ -52,33 +52,30 @@ body{
         .navbar-header{
             margin: 0px;
         }
+        &>.navbar-collapse{
+            position: fixed;
+            z-index: 1000;
+            bottom: 0px;
+            top: 0px;
+            margin-left: -15px;
+            width: 0px;
+            white-space: nowrap;
+            box-shadow: none;
+            border-top: 0px solid white;
+            padding: 0px;
+            display: block;
+            overflow-y: auto;   
+            background-color: $black;
+            overflow-x: hidden;
+        }
+        ul{
+            padding: 0px;
+        }     
     }
 }
 
 .transition{
      transition: width 0.35s !important; 
-}
-
-.container{
-    &>.navbar-collapse{
-        position: fixed;
-        z-index: 1000;
-        bottom: 0px;
-        top: 0px;
-        margin-left: -15px;
-        width: 0px;
-        white-space: nowrap;
-        box-shadow: none;
-        border-top: 0px solid white;
-        padding: 0px;
-        display: block;
-        overflow-y: auto;   
-        background-color: $black;
-        overflow-x: hidden;
-    }
-    ul{
-        padding: 0px;
-    }
 }
 
 .navbar-toggle{
