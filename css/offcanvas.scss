@@ -67,9 +67,14 @@ body{
             overflow-y: auto;   
             background-color: $black;
             overflow-x: hidden;
+            &.in{
+                width: 90%;
+                background-color: $black;
+            }
         }
         ul{
-            padding: 0px;
+            width: 100%;
+            padding-left: 15px;
         }     
     }
 }
@@ -81,17 +86,6 @@ body{
 .navbar-toggle{
     border: none;
     margin-left: 10px;
-}
-
-.container{
-    &>.navbar-collapse.in{
-      width: 90%;
-      background-color: $black;
-    }
-    ul{
-        width: 100%;
-        padding-left: 15px;
-    }
 }
 
 .navbar-nav {
@@ -111,17 +105,17 @@ body{
                 background-color: transparent;
                 padding-left: none;
             }
+            &>.navbar-collapse{
+                position: initial;
+                z-index: initial;
+                bottom: initial;
+                top: initial;;
+                background-color: initial;
+                margin: initial;
+                width: initial;
+            }      
         }
-    }    
-    .container>.navbar-collapse{
-        position: initial;
-        z-index: initial;
-        bottom: initial;
-        top: initial;;
-        background-color: initial;
-        margin: initial;
-        width: initial;
-    }   
+    }     
     
     .navbar-nav {
       margin: initial;
