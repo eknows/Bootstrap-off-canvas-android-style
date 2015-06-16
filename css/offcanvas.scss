@@ -47,6 +47,7 @@ body{
 }
 
 .navbar{
+    z-index: auto;
     .container{
         padding: 0px;
         .navbar-header{
@@ -94,6 +95,7 @@ body{
 
 @media(min-width: 768px){
     .navbar{
+        z-index: 1000;
         .container{
             padding:0 15px;
             .navbar-header{
