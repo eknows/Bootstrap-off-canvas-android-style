@@ -10,7 +10,7 @@ Bootstrap navigation hack for Android style off canvas menu.
 5. Hack your Bootstrap navigation:
 
 Add directly after the body tag
-```<div class="overlay"></div>``` 
+```<div class="overlay"></div>```
 
 Change data-toggle to offcanvas
 ```<button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" aria-controls="navbar">```
@@ -22,4 +22,4 @@ Add class pull-left to navbar Button
 ```<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas" aria-controls="navbar">```
 
 ## Demo Time
-http://jsfiddle.net/do05ptj2/
+http://jsfiddle.net/do05ptj2/1/

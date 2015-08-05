@@ -48,7 +48,7 @@ body{
 
 .navbar{
     z-index: auto;
-    .container{
+    .container, .container-fluid{
         padding: 0px;
         .navbar-header{
             margin: 0px;
@@ -65,7 +65,7 @@ body{
             border-top: 0px solid white;
             padding: 0px;
             display: block;
-            overflow-y: auto;   
+            overflow-y: auto;
             background-color: $black;
             overflow-x: hidden;
             &.in{
@@ -76,12 +76,12 @@ body{
         ul{
             width: 100%;
             padding-left: 15px;
-        }     
+        }
     }
 }
 
 .transition{
-     transition: width 0.35s !important; 
+     transition: width 0.35s !important;
 }
 
 .navbar-toggle{
@@ -96,7 +96,7 @@ body{
 @media(min-width: 768px){
     .navbar{
         z-index: 1000;
-        .container{
+        .container, .container-fluid{
             padding:0 15px;
             .navbar-header{
                 margin: 0px;
@@ -115,15 +115,15 @@ body{
                 background-color: initial;
                 margin: initial;
                 width: initial;
-            }      
+            }
         }
-    }     
-    
+    }
+
     .navbar-nav {
       margin: initial;
     }
     .overlay{
         display: none;
     }
-    
+
 }
