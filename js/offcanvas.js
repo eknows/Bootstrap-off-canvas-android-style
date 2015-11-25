@@ -1,12 +1,15 @@
+/*! bootstrap-off-canvas-android-style - v1.0.1
+* Copyright (c) 2015 Steffen Ermel; Licensed MIT *
+*/
 jQuery(document).ready(function($) {
-        
+
     $('[data-toggle="offcanvas"]').click(function () {
         $('.overlay').addClass('active');
         $('body').addClass('active');
         $('.navbar-collapse').addClass('transition');
         $('.navbar-collapse').addClass('in');
     });
-    
+
     function whichTransitionEvent() {
         var el = document.createElement('event'),
             transitionEvents = {
@@ -21,26 +24,36 @@ jQuery(document).ready(function($) {
         }
     }
     var transitionEvent = whichTransitionEvent();
-    
+
     $('.overlay').click(function () {
         $('#navbar').removeClass('in');
         $('.overlay').removeClass('active');
         $('body').removeClass('active');
         $('.transition').one(transitionEvent,
-        
+
         function(e) {
              $('.navbar-collapse').removeClass('transition');
         });
     });
-    
-    $(".overlay").swiperight(function() {  
+
+    $('.navbar .nav a').click(function () {
+        $('#navbar').removeClass('in');
+        $('.overlay').removeClass('active');
+        $('body').removeClass('active');
+        $('.transition').one(transitionEvent,
+        function(e) {
+             $('.navbar-collapse').removeClass('transition');
+        });
+    });
+
+    $(".overlay").swiperight(function() {
         $('.overlay').addClass('active');
         $('body').addClass('active');
         $('#navbar').addClass('in');
-        $('.navbar-collapse').addClass('transition'); 
-    });  
-    
-    $(".overlay").swipeleft(function() {  
+        $('.navbar-collapse').addClass('transition');
+    });
+
+    $(".overlay").swipeleft(function() {
         $('.overlay').removeClass('active');
         $('body').removeClass('active');
         $('#navbar').removeClass('in');
@@ -48,6 +61,6 @@ jQuery(document).ready(function($) {
             function(e) {
                  $('.navbar-collapse').removeClass('transition');
             });
-    });  
-    
+    });
+
 });
