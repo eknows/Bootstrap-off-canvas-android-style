@@ -22,4 +22,4 @@ Add class pull-left to navbar Button
 ```<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas" aria-controls="navbar">```
 
 ## Demo Time
-http://jsfiddle.net/do05ptj2/3/
+http://jsfiddle.net/do05ptj2/4/
