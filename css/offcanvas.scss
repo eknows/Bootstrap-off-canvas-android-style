@@ -1,4 +1,4 @@
-/*! bootstrap-off-canvas-android-style - v1.0.2
+/*! bootstrap-off-canvas-android-style - v1.0.3
  * Copyright (c) 2015 Steffen Ermel; Licensed MIT *
  */
 
@@ -112,6 +112,13 @@ body{
                 padding-left: none;
             }
             &>.navbar-collapse{
+                position: relative;
+                z-index: auto;
+                bottom: auto;
+                top: auto;
+                background-color: transparent;
+                margin: auto;
+                width: auto;
                 position: initial;
                 z-index: initial;
                 bottom: initial;

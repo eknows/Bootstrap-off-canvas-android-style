@@ -1,4 +1,4 @@
-/*! bootstrap-off-canvas-android-style - v1.0.2
+/*! bootstrap-off-canvas-android-style - v1.0.3
 * Copyright (c) 2015 Steffen Ermel; Licensed MIT *
 */
 jQuery(document).ready(function($) {
