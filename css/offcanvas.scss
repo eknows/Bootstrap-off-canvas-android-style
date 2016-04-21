@@ -1,4 +1,4 @@
-/*! bootstrap-off-canvas-android-style - v1.0.3
+/*! bootstrap-off-canvas-android-style - v1.0.4
  * Copyright (c) 2015 Steffen Ermel; Licensed MIT *
  */
 
@@ -6,135 +6,179 @@ $black: #222;
 $white: #fff;
 $lightblack: #080808;
 
-html, body{
-}
-
-body{
-    &.active{
+body
+{
+    &.active
+    {
         overflow-x: hidden;
         overflow-y: hidden;
+        .navbar
+        {
+            z-index: 1000;
+        }
     }
 }
 
-
-.overlay{
-    background-color: rgba(0, 0, 0, 0);
+.overlay
+{
     position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    width: 25px;
     z-index: 100;
-    &.active{
-        background-color: rgba(0, 0, 0, 0.5);
-        transition: background-color 0.35s;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 25px;
+
+    background-color: rgba(0, 0, 0, 0);
+    &.active
+    {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
         width: 100%;
+
+        transition: background-color .35s;
+
+        background-color: rgba(0, 0, 0, .5);
     }
 }
 
-.navbar{
+.navbar
+{
     border: none;
-     .navbar-nav>.current-menu-item {
-        a{
+    .navbar-nav > .current-menu-item
+    {
+        a
+        {
             color: $white;
             background-color: $lightblack;
         }
     }
 }
 
-.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+.navbar .navbar-toggle:focus,
+.navbar .navbar-toggle:hover
+{
     background-color: transparent;
 }
 
-.navbar{
+.navbar
+{
     z-index: auto;
-    .container, .container-fluid{
-        padding: 0px;
-        .navbar-header{
-            margin: 0px;
+    .container,
+    .container-fluid
+    {
+        padding: 0;
+        .navbar-header
+        {
+            margin: 0;
         }
-        &>.navbar-collapse{
+        & > .navbar-collapse
+        {
             position: fixed;
             z-index: 1000;
-            bottom: 0px;
-            top: 0px;
-            margin-left: -15px;
-            width: 0px;
-            white-space: nowrap;
-            box-shadow: none;
-            border-top: 0px solid white;
-            padding: 0px;
+            top: 0;
+            bottom: 0;
+
             display: block;
-            overflow-y: auto;
-            background-color: $black;
             overflow-x: hidden;
-            &.in{
+            overflow-y: auto;
+
+            width: 0;
+            margin-left: -15px;
+            padding: 0;
+
+            white-space: nowrap;
+
+            border-top: 0 solid white;
+            background-color: $black;
+            box-shadow: none;
+            &.in
+            {
                 width: 90%;
+
                 background-color: $black;
             }
         }
-        ul{
+        ul
+        {
             width: 100%;
             padding-left: 15px;
         }
     }
 }
 
-.transition{
-     transition: width 0.35s !important;
+.transition
+{
+    transition: width .35s !important;
 }
 
-.navbar-toggle{
-    border: none;
+.navbar-toggle
+{
     margin-left: 10px;
+
+    border: none;
 }
 
-.navbar-nav {
-    margin: 0px;
+.navbar-nav
+{
+    margin: 0;
 }
 
-@media(min-width: 768px){
-    .navbar{
+@media(min-width: 768px)
+{
+    .navbar
+    {
         z-index: 1000;
-        .container, .container-fluid{
-            padding:0 15px;
-            .navbar-header{
-                margin: 0px;
-                padding: 0px;
+        .container,
+        .container-fluid
+        {
+            padding: 0 15px;
+            .navbar-header
+            {
+                margin: 0;
+                padding: 0;
             }
-            ul{
+            ul
+            {
                 width: auto;
-                background-color: transparent;
                 padding-left: none;
             }
-            &>.navbar-collapse{
-                position: relative;
-                z-index: auto;
-                bottom: auto;
-                top: auto;
+            & > ul
+            {
                 background-color: transparent;
-                margin: auto;
-                width: auto;
+            }
+
+            & > .navbar-collapse
+            {
+                position: relative;
                 position: initial;
+                z-index: auto;
                 z-index: initial;
+                top: auto;
+                top: initial;
+                bottom: auto;
                 bottom: initial;
-                top: initial;;
-                background-color: initial;
-                margin: initial;
+
+                width: auto;
                 width: initial;
+                margin: auto;
+                margin: initial;
+
+                background-color: transparent;
+                background-color: initial;;
             }
         }
     }
 
-    .navbar-nav {
-      margin: initial;
+    .navbar-nav
+    {
+        margin: initial;
     }
-    .overlay{
+    .overlay
+    {
         display: none;
     }
-
 }

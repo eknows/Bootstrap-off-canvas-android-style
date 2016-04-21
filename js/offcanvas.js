@@ -1,4 +1,4 @@
-/*! bootstrap-off-canvas-android-style - v1.0.3
+/*! bootstrap-off-canvas-android-style - v1.0.4
 * Copyright (c) 2015 Steffen Ermel; Licensed MIT *
 */
 jQuery(document).ready(function($) {
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
         });
     });
 
-    $('.navbar .nav a').click(function () {
+    $('.navbar .nav a:not(".dropdown-toggle")').click(function () {
         $('#navbar').removeClass('in');
         $('.overlay').removeClass('active');
         $('body').removeClass('active');
